@@ -3,7 +3,7 @@ import json
 # 이탈리아 로마 날씨
 lat = 41.8905  # 위도
 lon = 12.4942  # 경도
-apikey = "789742d4d69e0beb19968160b547475f"
+apikey = "###"
 api = f"""http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={apikey}"""
 
 result = requests.get(api)
