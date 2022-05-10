@@ -4,7 +4,7 @@ from datetime import datetime  # 현재 시간
 import pandas as pd  # 판다스 사용
 
 
-print(datetime.today().strftime("%Y년 %m월 %d일의 멜론차트 순위입니다."))
+print(datetime.today().strftime("%Y년 %m월 %d일의 멜론차트 순위입니다.")) #날짜
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'}
@@ -34,4 +34,4 @@ for info in infoset:
 print(values)
 
 df = pd.DataFrame(values, columns=["순위", "노래제목", "가수", "앨범"])  # 데이터프레임 생성
-df.to_csv("2022-05-10 TOP 100.csv")
+df.to_csv("2022-05-10 TOP 100.csv", encoding='utf-8-sig') #한글 깨지지 않도록 인코딩해주기
